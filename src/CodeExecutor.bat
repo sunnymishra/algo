@@ -1,7 +1,7 @@
 @echo off && setlocal EnableDelayedExpansion
 
 set argument1=%1
-set filename=EpiExecutorFolderName.txt
+set filename=CodeExecutorFolderName.txt
 set persistedFolderName=
 
 if [%argument1%] == [] (
