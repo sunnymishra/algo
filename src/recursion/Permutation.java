@@ -1,16 +1,19 @@
 package recursion;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
 
 import org.junit.Test;
 
 public class Permutation{
 	@Test
 	public void testAllPermutation() {
-		Integer[] arr = new Integer[] {6,2,5};
+		Integer[] arr = new Integer[] {4,3,5,2};
 		System.out.println("\nAll Permutation:\nInput: "+ Arrays.toString(arr)+"\nOutput:");
 		
-		allPermutation(arr);
+		allPermutation3(arr);
 	}
 	
 			
@@ -35,32 +38,52 @@ public class Permutation{
 		Step 3: Once the Recursion stack unwinds and returns back to the current stack, then unswap the 2 elements. So that we can move forward to the next element in the FOR loop and repeat the whole process again. This is the Backtracking step of reverting the changes made into the data structures before calling the next recursion stack.
 		
 		Asymptotic analysis:
-		Time complexity: O(n!) i.e. Factorial of N solution, where n is Array size
-		Since this is an exhaustive recursion this automatically makes it a O(n!). Why is this n! and not n^n? At a current level in the recursion tree if there are n possibilities, then the child level in the Recursion tree, the no. of possibilities reduce to n-1. So this becomes an Arithmetic progression =>
+		Time complexity: O(n x n!) where n is Array size
+		Since this is an exhaustive recursion this is a Factorial of n i.e. n!. Why is this n! and not n^n? At a current level in the recursion tree if there are n possibilities, then the child level in the Recursion tree, the no. of possibilities reduce to n-1. So this becomes an Arithmetic progression =>
 		n x (n-1) x (n-2) ..... 3 x 2 x 1 = n!
+		Also note that at every stack level we are also doing a O(n) computation, therefore T(n) = O(n x n!)
+		
 		Space complexity: O(n) where n is Array size. Since the Recursion stack maximum depth is the length of the array.
 		It is always a good idea to use Paper and Pen to draw a Tree in order to visualize the Recursion stack in action. The depth of the tree will be Space complexity and No. of nodes ~ No. of Leaves in the tree will be the Time complexity
+		
+		NOTE: This solution doesn't work when there are duplicates in the input. eg. Input=[a,a,b,b,c]. In this case the Output will have some duplicates. In that case we have to optimize this Algorithm to use HashSet to remove duplicates. 
 	*/
-	public void allPermutation(Integer[] arr) {
+	public void allPermutation1(Integer[] arr) {
 		if(arr==null || arr.length==0){
 			System.out.println("Invalid input");
 			return;
 		}
-		_allPermutation(arr, 0);
+		_allPermutation1(arr, 0);
 	}
 
-	private void _allPermutation(Integer[] arr, int idx) {
+	private void _allPermutation1(Integer[] arr, int idx) {
 		if(idx==arr.length-1){
 			System.out.println(Arrays.toString(arr));
 			return;
 		}
 		for(int i=idx; i<arr.length; i++){
 			swap(arr, idx, i);
-			_allPermutation(arr, idx+1);
+			_allPermutation1(arr, idx+1);
 			swap(arr, idx, i);
 		}
 	}
 	
+	
+	/**
+		Another approach of solving ALL Permutation problem is by printing all Permutation in a lexicographic order or dictionary order. We can write a small utility function called nextPermutation() which takes an array and always return the next permutation of that array. Then we can simply Create another function which will sort the original array and then call that netPermutation Function n! (Factorial of n) no. of times. Why n! no. of times? Since if we enumerate the total no. of possible Permutation of size n, we get P(n, n) = n! / (n-n)! = n! i.e. There are total Factorial of n different permutation of size n for a given input of size n.
+		
+		Time complexity: T(n) = O(n x n!), because NextPermutation = O(n) and we are calling NextPermutation function n! no. of times, therefore Total T(n) = O(n x n!)
+	*/
+	private void _allPermutation2(Integer[] arr){
+		Arrays.sort(arr);	// This will take care of printing in Lexicographic or Dictionary order
+		int counter=1;
+		for(int i=1;i<=arr.length;i++)
+			counter*=i;
+		while(counter-- >0) {
+			System.out.println(Arrays.toString(arr));
+			nextPermutation1(arr);
+		}
+	}
 	
 	/**
 		Problem:
@@ -111,27 +134,71 @@ public class Permutation{
 	
 	
 	/**
-		Lexicographically print the Next permutation of the input Array.
+		Below is a better but a little complex algorithm which takes care of Duplicates in the Input array and also prints output in the Lexicographically order.
 		Reference: https://www.youtube.com/watch?v=nYFd7VHKyWQ
 	*/
-	public void nextPermutation2(Integer[] arr){
-		Integer[] permArr = new Integer[arr.length];
-		Arrays.fill(permArr, 0);
-		_nextPermutation2(arr, permArr);
-	}
-	private void _nextPermutation2(Integer[] arr, Integer[] permutation) {
-		if(arr==null || permutation==null || arr.length==0 || permutation.length==0 || arr.length<permutation.length)
+	public void allPermutation3(Integer[] arr){
+		if(arr==null || arr.length==0)
 			return;
-		for(int i=0; i<permutation.length; i++) {
-			int nextIdx=i;
-			
-			while(permutation[nextIdx] >= 0) {
-				swap(arr, i, permutation[nextIdx]);
-				
-				int tempIdx=permutation[nextIdx];
-				permutation[nextIdx]=permutation[nextIdx]-permutation.length;
-				nextIdx=tempIdx;
+		Arrays.sort(arr); 	// For printing permutations in lexicographic order we must sort first
+		KeyCountPair[] keyCountArr = fillKeyCountPair(arr);
+		
+		_allPermutation3(arr, keyCountArr, 0);
+	}
+	private void _allPermutation3(Integer[] arr, KeyCountPair[] keyCountArr, int outputArrIdx) {
+		if(outputArrIdx == arr.length){
+			System.out.println(Arrays.toString(arr));
+			return;
+		}
+		for(int i=0; i<keyCountArr.length; i++) {
+			KeyCountPair keyCountPair = keyCountArr[i];
+			if(keyCountPair.count > 0){
+				arr[outputArrIdx]=keyCountPair.key;
+				keyCountPair.count--;
+				_allPermutation3(arr, keyCountArr, outputArrIdx+1);
+				keyCountPair.count++;
 			}
+		}
+	}
+	
+	 
+	//a a b c
+	
+	private KeyCountPair[] fillKeyCountPair(Integer[] arr){
+		int uniqueElementCount = 1;
+		for(int i=1; i<arr.length; i++){
+			if(arr[i]!=arr[i-1]){
+				uniqueElementCount++;
+			}
+		}
+
+		KeyCountPair[] dataArr = new KeyCountPair[uniqueElementCount];
+		
+		int newIdx=0;
+		for(int i=0; i<arr.length; i++){
+			Integer key=arr[i];
+			Integer count=1;
+			while(i<arr.length-1 && arr[i+1]==key){
+				count++;
+				i++;
+			}
+			
+			dataArr[newIdx++]=new KeyCountPair(key, count);
+			
+		}
+		return dataArr;
+	}
+	
+	class KeyCountPair{
+		Integer key;
+		Integer count;
+		
+		public KeyCountPair(Integer key, Integer count){
+			this.key=key;
+			this.count=count;
+		}
+		public String toString(){
+			return "key: "+this.key + " count: "+this.count	;
 		}
 	}
 	
