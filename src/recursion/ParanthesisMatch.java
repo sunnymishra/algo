@@ -27,6 +27,7 @@ public class ParanthesisMatch{
 	*/
 	public void paranthesisMatch(int paranthesisPairCount){
 		// Collections.nCopies() adds n elements in the List> Here I am setting dummy value '|' in the list.
+		// If we don't like using this Fixed size LIST, then better use an Array of size 2*paranthesisPairCount
 		List<Character> result = new ArrayList<>(Collections.nCopies(2*paranthesisPairCount, '|'));
 		paranthesisMatch(paranthesisPairCount, 0, 0, 0, result);
 	}
@@ -47,5 +48,7 @@ public class ParanthesisMatch{
 		}
 		
 	}
+	
+
 	
 }

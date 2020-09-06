@@ -5,3 +5,6 @@
 5. PowerSet (Recursive and Iterative)
 6. Subset (All Subset of size k)
 7. Balanced parentheses (all combinations of balanced parentheses pair of size n)
+8. Palindrome Partitioning
+9. Binary Trees Generation of n nodes
+10. Gray Codes Generation of n-bits
