@@ -14,6 +14,8 @@ public class MaxSubArraySum{
 	public void maxSubArraySum2(){
 		Assert.assertEquals(18, maxSubArraySum2(new int[]{7,6,5,-3,-2,1,-4}));
 		Assert.assertEquals(24, maxSubArraySum2(new int[]{7,6,5,-3,-2,11,-4}));
+		
+		Assert.assertEquals(6, maxSubArraySum2(new int[]{1,2,-3,2,-4,6,-3,2}));
 	}
 	
 	/**
