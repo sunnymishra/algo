@@ -20,3 +20,7 @@ Topic - Dynamicprogramming:
 14. Max SubArray Sum
 15. Coin change combinations(Iterative and Recursive)
 16. Stairs climbing problem(Recursive)
+17. Longest common Subsequence strings
+18. Team score sequence
+19. Make Palindrome string(2 approaches)
+20. Levenshtein Distance of 2 strings
