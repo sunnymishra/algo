@@ -10,7 +10,6 @@ public class LongestCommonSubsequence{
 	public void lcs(){
 		Assert.assertEquals(4, lcs1("abcdeh", "abedfh"));
 		Assert.assertEquals(3, lcs1("ABCDGH", "AEDFHR"));
-		Assert.assertEquals(4, lcs1("AGGTAB", "GXTXAYB"));
 		
 	}
 	/**
@@ -29,11 +28,11 @@ public class LongestCommonSubsequence{
 			Take the max returned by above 2 calls, and return it to the previous Recursion stack level.
 	
 		Asymptotic analysis:
-			Time complexity: O(2^ (m+n)) without Memoization i.e. If we don't use the Cache Array to store the intermediate results. Why 2^n because at any level we have 2 choices to make. And the depth of Recursion Tree is at max upto n , where n is the Smallest length among the 2 Strings. Check the 1st IF Condition in the below function _lcs1().
+			Time complexity: O(2^ (m+n)) without Memoization i.e. If we don't use the Cache Array to store the intermediate results. Why 2^(m+n)? If you draw the Recursion tree with Pen and Paper, for a worst case scenario in which none of the characters of 2 Strings match eg. str1="ABC", str2="XYZ". In this case the Depth of the Tree will be m+n, where m=str1 length and n=str2 length. Now that we have understood that the Depth of the Tree=m+n, you will also notice that at any level in the Recursion Tree, we have 2 choices to make. If you do the Math it comes to 2^(m+n), therefore Time complexity = O(2 ^ (m+n))
 			
 			Time complexity: O(m x n) with Memoization
 			
-			Space complexity: O(m x n) without Memoization, due to the level/depth of Recursion tree is max n.
+			Space complexity: O(m + n) without Memoization, due to the level/depth of Recursion tree is max (m+n).
 			Space complexity: O(m x n) with Memoization, since the Array size is [m rows x n columns]
 			
 		Note: There is a scope to reduce the Space complexity from current O(m x n) to simple O(n), by changing the 2 Dimensional Cache Array to a Single Dimensional array.

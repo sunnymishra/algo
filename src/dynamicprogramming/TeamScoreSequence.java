@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class TeamScoreSequence{
 	@Test
 	public void teamScoreSequence(){
-		Assert.assertEquals(5, teamScoreSequence1(new int[]{1,2}, 2, 1));
+		Assert.assertEquals(5, teamScoreSequence2(new int[]{1,2}, 2, 1));
 		
 	}
 	
