@@ -22,5 +22,6 @@ Topic - Dynamicprogramming:
 16. Stairs climbing problem(Recursive)
 17. Longest common Subsequence strings
 18. Team score sequence
-19. Make Palindrome string(2 approaches)
+19. Make Palindrome string by deleting characters
 20. Levenshtein Distance of 2 strings
+21. Make Palindrome string by adding characters
