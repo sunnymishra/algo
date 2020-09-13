@@ -5,7 +5,7 @@ import org.junit.Assert;
 import java.util.Arrays;
 
 
-public class MakePalindrome{
+public class MakePalindromeByDeleting{
 	@Test
 	public void makePalindrome1(){
 		Assert.assertEquals(1, makePalindrome1("BCBK"));

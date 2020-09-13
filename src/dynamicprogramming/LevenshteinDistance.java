@@ -9,6 +9,7 @@ public class LevenshteinDistance{
 	public void levenshteinDistance(){
 		Assert.assertEquals(4, levenshteinDistance("Saturday", "Sundays"));
 		Assert.assertEquals(8, levenshteinDistance("Orchestra", "Carthorse"));
+		Assert.assertEquals(1, levenshteinDistance("Sat", "Sut"));
 	}
 	
 	/**
@@ -47,8 +48,13 @@ public class LevenshteinDistance{
 	}
 	
 	private int _levenshteinDistance(String str1, String str2, int str1Idx, int str2Idx, int[][] cache){
-		if(str1Idx==0 || str2Idx==0){
-			return 0;
+		if(str1Idx==0) {
+			// Since str1 is 0, and str2 length is lets say X. Then it will take X steps for str1 to become str2. Therefore the Levenshtein distance between str1 & str2=str2's length in this IF condition.
+			return str2Idx;
+		}
+		if(str2Idx==0) {
+			// Since str2 is 0, and str2 length is lets say X. Then it will take X steps for str2 to become str1. Therefore the Levenshtein distance between str1 & str2=str1's length in this IF condition.
+			return str1Idx;
 		}
 		if(cache[str1Idx-1][str2Idx-1]!=0){
 			return cache[str1Idx-1][str2Idx-1];
@@ -58,9 +64,10 @@ public class LevenshteinDistance{
 		if(str1.charAt(str1Idx-1)==str2.charAt(str2Idx-1)){
 			distance= _levenshteinDistance(str1, str2, str1Idx-1, str2Idx-1, cache);
 		}else{
-			int distance1=_levenshteinDistance(str1, str2, str1Idx-1, str2Idx, cache);
-			int distance2=_levenshteinDistance(str1, str2, str1Idx, str2Idx-1, cache);
-			distance= Math.min(distance1, distance2) + 1;
+			int distance1=_levenshteinDistance(str1, str2, str1Idx-1, str2Idx, cache); // Remove 1 char
+			int distance2=_levenshteinDistance(str1, str2, str1Idx, str2Idx-1, cache); // Add 1 char
+			int distance3=_levenshteinDistance(str1, str2, str1Idx-1, str2Idx-1, cache); // Replace 1 char
+			distance= Math.min(Math.min(distance1, distance2), distance3) + 1;
 		}
 		cache[str1Idx-1][str2Idx-1]=distance;
 		return distance;
