@@ -24,4 +24,4 @@ Topic - Dynamicprogramming:
 18. Team score sequence
 19. Make Palindrome string by deleting characters
 20. Levenshtein Distance of 2 strings
-21. Make Palindrome string by adding characters
+21. Make Palindrome string by adding characters (Recursive and Iterative)
