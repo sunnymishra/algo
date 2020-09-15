@@ -27,3 +27,9 @@ Topic - Dynamicprogramming:
 21. Make Palindrome string by adding characters (Recursive and Iterative)
 22. 2D Array traversal
 23. Binomial co-efficient using Pascal's triangle
+24. Catch Fish in a 2D Matrix with max value (Recursive, Iterative & Space efficient solution)
+25. Validate Interleaving of 2 Strings
+
+
+
+

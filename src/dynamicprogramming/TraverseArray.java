@@ -79,7 +79,7 @@ public class TraverseArray{
 		This recurrence relation is ditto the same as had used in the previous Recursive approach solution in the function _traverseArray1() above.
 		
 		Asymptotic analysis:
-		Time complexity with Memoization: O(m x n) Reason: we are storing intermediate results in an extra cache array of dimension m,n
+		Time complexity with Memoization: O(m x n) Reason: We are using 2 Nested FOR loops of size m and n
 		Space complexity with Memoization: O(m x n), Reason: we are storing intermediate results in an extra cache array of dimension m,n
 	*/
 	public int traverseArray2(int[][]arr){
@@ -119,7 +119,7 @@ public class TraverseArray{
 	}
 	
 	/**
-		This is the 3rs approach of solving the same problem. People doing Competitive programming try to find shortcuts to get the result. Given n rows and m columns, at max there are (n C m) combinations possible. So in 1 single computation we can get the result of (n C m) without using any complex Recursion or Iteration algorithms as mentioned in above 2 Functions traverseArray1() and traverseArray2()
+		This is the 3rd approach of solving the same problem. People doing Competitive programming try to find shortcuts to get the result. Given n rows and m columns, at max there are (n C m) combinations possible. So in 1 single computation we can get the result of (n C m) without using any complex Recursion or Iteration algorithms as mentioned in above 2 Functions traverseArray1() and traverseArray2()
 		
 		Asymptotic analysis:
 		Time complexity with Memoization: O(1)
