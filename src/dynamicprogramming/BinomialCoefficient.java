@@ -48,6 +48,7 @@ public class BinomialCoefficient{
 		}
 		int result=cache[n][k-1];
 		
+		// Printing Result below
 		for(int i=0;i<n+1;i++){
 			System.out.println(Arrays.toString(cache[i]));
 		}
