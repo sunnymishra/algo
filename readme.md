@@ -32,7 +32,7 @@ Topic - Dynamicprogramming:
 26. Find Pattern In A 2D Array
 27. 0-1 Knapsack Problem
 28. Dictionary Word Break
-
+29. Minimum Weight Path of a Triangle
 
 
 
