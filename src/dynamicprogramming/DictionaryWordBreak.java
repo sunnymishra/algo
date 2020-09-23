@@ -98,6 +98,7 @@ public class DictionaryWordBreak{
 		This is an Iterative solution exactly similar to the above Recursive solution. However in this case
 		for optimization purpose we are using Memoization by storing intermediate results, because we found
 		several Overlapping sub-problems.
+		Reference: https://www.geeksforgeeks.org/word-break-problem-dp-32/
 		
 		Time complexity:
 		Outer loop runs for n times. Inner loop runs for n times. So n^2 is the total runtime. However if we also include the time taken for doing a Substring operation and Hashing it in order to do a Hashtable match in HashSet, then another 'n' time is spent inside each inner loop. So that makes it a total of n^3. 
@@ -153,7 +154,7 @@ public class DictionaryWordBreak{
 	
 	/**
 		This is the Bottom-up approach using Memoization in which Intermediate results are stored in the 2D Array. Since the size of Cache array = n^2, so the Space Complexity=O(n^2)
-	
+		Reference: https://www.youtube.com/watch?v=WepWFGxiwRs
 	*/
 	public boolean dictionaryWordBreak3(String[] dict, String sentence){
 		if(dict==null || dict.length==0 || sentence==null || sentence.isEmpty()) return false;
