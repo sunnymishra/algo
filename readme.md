@@ -31,8 +31,8 @@ Topic - Dynamicprogramming:
 25. Validate Interleaving of 2 Strings
 26. Find Pattern In A 2D Array
 27. 0-1 Knapsack Problem
-28. Dictionary Word Break
-29. Minimum Weight Path of a Triangle
+28. Minimum Weight Path of a Triangle
+29. Dictionary Word Break (Top-down, Bottom-up and Alternate approach with Memoization)
 
 
 
