@@ -33,6 +33,6 @@ Topic - Dynamicprogramming:
 27. 0-1 Knapsack Problem
 28. Minimum Weight Path of a Triangle
 29. Dictionary Word Break (Top-down, Bottom-up and Alternate approach with Memoization)
-
+30. Maximum Coin Selection among 2 players
 
 
