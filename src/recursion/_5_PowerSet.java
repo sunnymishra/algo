@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 import org.junit.Test;
 
-public class PowerSet{
+public class _5_PowerSet{
 	@Test
 	public void testPowerSet() {
 		List<Integer> inputSet = new ArrayList(Arrays.asList(new Integer[] {1,2,3}));

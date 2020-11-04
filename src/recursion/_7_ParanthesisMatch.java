@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ParanthesisMatch{
+public class _7_ParanthesisMatch{
 	@Test
 	public void paranthesisMatch(){
 		

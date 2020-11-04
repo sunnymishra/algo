@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.LinkedList;
 import java.util.Random;
 
-public class BinaryTreeGenerate{
+public class _9_BinaryTreeGenerate{
 	@Test
 	public void testPalindromePartitioning(){
 		generateAllBinaryTreesOfNNodes(3);

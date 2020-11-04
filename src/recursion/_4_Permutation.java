@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-public class Permutation{
+public class _4_Permutation{
 	@Test
 	public void testAllPermutation() {
 		Integer[] arr = new Integer[] {4,3,5,2};

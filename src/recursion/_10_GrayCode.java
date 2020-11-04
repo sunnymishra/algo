@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.Arrays;
 
-public class GrayCode{
+public class _10_GrayCode{
 	@Test
 	public void generateGrayCode(){
 		

@@ -35,7 +35,7 @@ import java.util.List;
 	Reference: https://www.youtube.com/watch?v=xouin83ebxE
 
 */
-public class NQueens {
+public class _1_NQueens {
 	@Test
 	public void testNQueens(){
 		int n=6;

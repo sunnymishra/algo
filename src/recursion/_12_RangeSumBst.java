@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
-public class RangeSumBst {
+public class _12_RangeSumBst {
 
 	@Test
 	public void testRangeSumBst() {

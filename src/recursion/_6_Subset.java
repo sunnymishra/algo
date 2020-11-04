@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Subset{
+public class _6_Subset{
 	@Test
 	public void testSubsetOfSizeK(){
 		subsetOfSizeK(Arrays.asList(1,2,3,4,5), 3);

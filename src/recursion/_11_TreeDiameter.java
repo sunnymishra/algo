@@ -3,7 +3,7 @@ package recursion;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class TreeDiameter{
+public class _11_TreeDiameter{
 	@Test
 	public void testTreeDiameter(){
 		BinaryTreeNode root = init();

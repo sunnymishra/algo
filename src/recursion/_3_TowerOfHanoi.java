@@ -22,7 +22,7 @@ import java.util.List;
 	It will be easier to understand the Space and Time complexity for a Recursion solution if I draw a Tree structure usina Paper and Pen. Every Level deep the Tree grows, the total no. of level = Space complexity. Every single node in the Tree = Time complexity. THis is the best visual way to come up with Space & Time complexities.
 	In the above Time complexity link I noticed the solution is using rigorous Math and used Geometric progression to solve to (2^n) but atleast basic idea can still be had by drawing the tree structure to understand visually.
 */
-public class TowerOfHanoi{ 
+public class _3_TowerOfHanoi{ 
 
 	@Test
 	public void testTowerofHanoiRecur(){

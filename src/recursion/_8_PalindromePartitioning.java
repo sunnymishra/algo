@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
-public class PalindromePartitioning{
+public class _8_PalindromePartitioning{
 	@Test
 	public void testPalindromePartitioning(){
 		String input = "0204451881";

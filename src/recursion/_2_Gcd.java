@@ -32,7 +32,7 @@ import java.util.List;
 	
 		
 */
-public class Gcd{ 
+public class _2_Gcd{ 
 
 	@Test
 	public void testGcd(){
