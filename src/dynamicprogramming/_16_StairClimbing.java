@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.Assert;
 import java.util.Arrays;
 
-public class StairClimbing{
+public class _16_StairClimbing{
 	@Test
 	public void stairClimbing1(){
 		Assert.assertEquals(24, stairClimbing1(6, 3));

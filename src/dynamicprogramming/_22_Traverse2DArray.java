@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.Assert;
 import java.util.Arrays;
 
-public class TraverseArray{
+public class _22_Traverse2DArray{
 	@Test
 	public void traverseArray1(){
 		System.out.println("\n");

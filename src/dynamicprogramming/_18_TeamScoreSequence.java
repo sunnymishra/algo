@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.Assert;
 import java.util.Arrays;
 
-public class TeamScoreSequence{
+public class _18_TeamScoreSequence{
 	@Test
 	public void teamScoreSequence(){
 		Assert.assertEquals(5, teamScoreSequence2(new int[]{1,2}, 2, 1));

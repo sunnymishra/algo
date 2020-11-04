@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
 
-public class CoinChange{
+public class _15_CoinChange{
 	@Test
 	public void coinChange1(){
 		Assert.assertEquals(4, coinChange1(12, new int[]{2,3,7}));

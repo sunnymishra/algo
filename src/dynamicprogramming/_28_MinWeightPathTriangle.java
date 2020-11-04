@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class MinWeightPathTriangle{
+public class _28_MinWeightPathTriangle{
 	@Test
 	public void minWeightPathTriangle1(){
 		List<List<Integer>> triangle = new ArrayList<>();

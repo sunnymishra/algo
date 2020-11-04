@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.Assert;
 import java.util.Arrays;
 
-public class LevenshteinDistance{
+public class _20_LevenshteinDistance{
 	@Test
 	public void levenshteinDistance(){
 		Assert.assertEquals(4, levenshteinDistance("Saturday", "Sundays"));

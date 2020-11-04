@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.Assert;
 import java.util.Arrays;
 
-public class MaxSubArraySum{
+public class _14_MaxSubArraySum{
 	@Test
 	public void maxSubArraySum1(){
 		Assert.assertEquals(18, maxSubArraySum1(new int[]{7,6,5,-3,-2,1,-4}));

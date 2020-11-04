@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.Assert;
 import java.util.Arrays;
 
-public class ValidateInterleavingString{
+public class _25_ValidateInterleavingString{
 	@Test
 	public void validateInterleavingString1(){
 		Assert.assertTrue(validateInterleavingString1("GTAA", "ATC", "GATTACA"));

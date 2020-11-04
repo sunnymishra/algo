@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class DictionaryWordBreak{
+public class _29_DictionaryWordBreak{
 	@Test
 	public void dictionaryWordBreak1(){
 		Assert.assertTrue(dictionaryWordBreak1(new String[]{"bed", "moon", "bath", "beyond", "bat", "hand", "sun"}, "bedbathandbeyond"));

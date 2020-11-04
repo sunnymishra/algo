@@ -3,7 +3,7 @@ package dynamicprogramming;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class MakePalindromeByAdding{
+public class _21_MakePalindromeByAdding{
 	@Test
 	public void makePalindrome(){
 		Assert.assertEquals(0, makePalindrome("ABA"));

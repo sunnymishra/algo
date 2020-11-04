@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import java.util.Arrays;
 
-public class BinomialCoefficient{
+public class _23_BinomialCoefficient{
 	@Test
 	public void binominalCoefficient(){
 		//Assert.assertEquals(4, binominalCoefficient(4,3));

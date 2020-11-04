@@ -5,7 +5,7 @@ import org.junit.Assert;
 import java.util.Map;
 import java.util.HashMap;
 
-public class Fibonacci{
+public class _13_Fibonacci{
 	@Test
 	public void fibonacci1(){
 		Assert.assertEquals(0, fibonacci1(0));

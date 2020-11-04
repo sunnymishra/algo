@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
-public class FindPatternIn2DArray{
+public class _26_FindPatternIn2DArray{
 	@Test
 	public void findPatternIn2DArray1(){
 		int[][]arr1={{1,2},{3,4}};

@@ -4,7 +4,10 @@ import org.junit.Assert;
 import org.junit.Test;
 import java.util.Arrays;
 
-public class FishCatching{
+/**
+	NOTE: This problem is very similar but a variation of the standard DP problem called: "The minimum path cost problem". See reference: https://www.geeksforgeeks.org/min-cost-path-dp-6/
+*/
+public class _24_FishCatchingMaxCost{
 	@Test
 	public void fishCatching1(){
 		System.out.println("\n");
@@ -36,9 +39,10 @@ public class FishCatching{
 	/**
 		Problem:
 		A fisherman is in a rectangular sea which can be charted using a 2D array of Dimension m x n. The fisherman should begin at the top left of a 2D array and end at bottom right. Each array cell (i,j) has a value for the Fish. Fisherman is allowed to move in either right or bottom direction. Find the max fish value that the fisherman can catch with this above mentioned constraints, once he reaches bottom right.
+		NOTE: This problem is very similar but a variation of the standard DP problem called: "The minimum path cost problem". See reference: https://www.geeksforgeeks.org/min-cost-path-dp-6/
 		
 		Asymptotic analysis:
-		Time complexity without Memoization(Storing intermediate result in a cache array): O(2^ (m+n)), where m,n are the dimensions of the 2D Input Array . Reason: In the recursion tree (draw using Pen and Paper to visualize this), at any level there are 2 child Nodes created at max. The depth of the Tree is max=m+n, although using Base condition we are bounding it by pruning the branch any further as soon as either m or n =0;
+		Time complexity without Memoization(Storing intermediate result in a cache array): O(2^ (m+n)), where m,n are the dimensions of the 2D Input Array . Reason: In the recursion tree (draw using Pen and Paper to visualize this), at any level there are 2 child Nodes created at max. The depth of the Tree is max=m+n, although using Base condition we are bounding it by pruning the branch from going any further as soon as either m=0 or n=0;
 		Time complexity with Memoization: O(m x n)
 		
 		Space complexity without Memoization: O(m+n)
@@ -81,8 +85,8 @@ public class FishCatching{
 	}
 	
 	/**
-		Problem:
-		Given a 2D array, a fisherman should begin at the top left of a 2D array and end at bottom right. Each cell has a value for the Fish. Fisherman is allowed to move in either right or bottom direction. Find the max fish value that the fisherman can catch with this above mentioned constraints.
+		Solution logic:
+		This function fishCatching2() is the Iterative solution to the same problem solved above using Recursive approach in fishCatching1()
 		
 		Asymptotic analysis:
 		Time complexity with Memoization: O(m x n) Reason: We are using 2 Nested FOR loops of size m and n

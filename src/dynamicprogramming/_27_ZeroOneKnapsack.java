@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import java.util.Arrays;
 
-public class ZeroOneKnapsack{
+public class _27_ZeroOneKnapsack{
 	@Test
 	public void knapsack(){
 		int[] valArray1 = { 60, 100, 120 }; 

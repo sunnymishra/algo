@@ -5,7 +5,7 @@ import org.junit.Assert;
 import java.util.Arrays;
 
 
-public class LongestCommonSubsequence{
+public class _17_LongestCommonSubsequence{
 	@Test
 	public void lcs(){
 		Assert.assertEquals(4, lcs1("abcdeh", "abedfh"));
