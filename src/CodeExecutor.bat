@@ -44,7 +44,7 @@ goto :EOF
 :EXECUTE_JAVA
 javac -cp ../lib/junit.jar;../lib/hamcrest.jar;.  "%persistedFolderName%\%argument1%.java"
 IF NOT EXIST ..\bin\%persistedFolderName% (
-	mkdir ..\bin\%persistedFolderName%
+	mkdir ..\bin\%persistedFolderName%	>NUL 2>&1
 )
 move %persistedFolderName%\%argument1%.class ..\bin\%persistedFolderName%\
 java -cp ../lib/junit.jar;../lib/hamcrest.jar;../bin/ org.junit.runner.JUnitCore %persistedFolderName%.%argument1%
