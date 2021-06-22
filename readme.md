@@ -35,5 +35,5 @@ Topic - Dynamicprogramming:
 29. Dictionary Word Break (Top-down, Bottom-up and Alternate approach with Memoization) [link](https://github.com/sunnymishra/algo/tree/master/src/epi/dynamicprogramming/_29_DictionaryWordBreak.java)
 30. Optimal Coin Selection Game among 2 players [link](https://github.com/sunnymishra/algo/tree/master/src/epi/dynamicprogramming/_30_CoinSelectionGame.java)
 31. Stair Climbing Ways [link](https://github.com/sunnymishra/algo/tree/master/src/epi/dynamicprogramming/_31_StairClimbingWays.java)
-32. Pretty Printing [link] (https://github.com/sunnymishra/algo/tree/master/src/epi/dynamicprogramming/_32_PrettyPrinting.java)
+32. Pretty Printing [link](https://github.com/sunnymishra/algo/tree/master/src/epi/dynamicprogramming/_32_PrettyPrinting.java)
 

@@ -1,4 +1,4 @@
-package array;
+package geeksForGeeksChallenge.array;
 
 import org.junit.Test;
 import org.junit.Assert;
@@ -40,7 +40,7 @@ public class _7_CountPowerPairs{
 			}
 			//System.out.println("x[i]=->"+ x[i] + " binarySearch y="+ searchNextBiggerNo(y, x[i]));
 		}
-		for(int j=0; j<N; i++){
+		for(int j=0; j<N; j++){
 			if(y[j]==0 || y[j]==1){
 				exceptionInYArray++;
 			}
